@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DoublePipe} from "../double.pipe";
 
 @Component({
   moduleId: module.id,
@@ -9,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
       margin: 32px;
       padding: 32px;
     }
-  `]
+  `],
+  pipes: [DoublePipe]
 })
 export class PipesComponent implements OnInit {
 
