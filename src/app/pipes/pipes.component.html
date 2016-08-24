@@ -8,4 +8,7 @@
   <h2>Custom Pipe</h2>
   <input type="text" #value (keyup)="0">
   <p>{{value.value | double}}</p>
+  <ul>
+    <li *ngFor="let item of values | filter:'ea'">{{item}}</li>
+  </ul>
 </div>

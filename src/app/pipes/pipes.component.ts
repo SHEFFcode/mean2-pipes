@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DoublePipe} from "../double.pipe";
+import {FilterPipe} from "../filter.pipe";
 
 @Component({
   moduleId: module.id,
@@ -11,12 +12,13 @@ import {DoublePipe} from "../double.pipe";
       padding: 32px;
     }
   `],
-  pipes: [DoublePipe]
+  pipes: [DoublePipe, FilterPipe]
 })
 export class PipesComponent implements OnInit {
 
   private myValue: string = 'lowercase';
   private date = new Date(2016, 5, 24);
+  private values = ['Milk', 'Bread', 'Beans'];
 
   constructor() { }
 
