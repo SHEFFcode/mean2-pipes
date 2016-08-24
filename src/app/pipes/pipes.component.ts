@@ -19,6 +19,9 @@ export class PipesComponent implements OnInit {
   private myValue: string = 'lowercase';
   private date = new Date(2016, 5, 24);
   private values = ['Milk', 'Bread', 'Beans'];
+  private asyncValue = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('data is here'), 2000);
+  });
 
   constructor() { }
 
